@@ -1,190 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arnol | Creative Developer</title>
+    <meta charset="UTF-8">
+    <title>Arnol | Creative Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-body{
-background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000000);
-background-size:400% 400%;
-animation: gradientBG 15s ease infinite;
-color:white;
-overflow-x:hidden;
-}
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            overflow-x: hidden;
+        }
 
-@keyframes gradientBG{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
+        header {
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 60px;
-display:flex;
-justify-content:space-between;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
-z-index:1000;
-}
+        header h2 {
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:30px;
-transition:0.3s;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
 
-nav a:hover{
-opacity:0.6;
-}
+        nav a:hover {
+            color: #00f5ff;
+        }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:0 20px;
-}
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
 
-.hero h1{
-font-size:80px;
-letter-spacing:-3px;
-animation: fadeUp 1.5s ease forwards;
-opacity:0;
-}
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
 
-.hero p{
-margin-top:20px;
-font-size:22px;
-max-width:600px;
-opacity:0;
-animation: fadeUp 2s ease forwards;
-}
+        .hero p {
+            font-size: 20px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
 
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
-}
-from{
-opacity:0;
-transform:translateY(30px);
-}
-}
+        .hero-img {
+            width: 85%;
+            max-width: 1000px;
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            transition: transform 0.4s ease;
+        }
 
-.btn{
-margin-top:40px;
-padding:15px 40px;
-border-radius:50px;
-border:none;
-font-weight:bold;
-cursor:pointer;
-background:white;
-color:black;
-transition:0.3s;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
+        .hero-img:hover {
+            transform: scale(1.03);
+        }
 
-.btn:hover{
-transform:scale(1.08);
-box-shadow:0 15px 40px rgba(0,0,0,0.6);
-}
+        .section {
+            padding: 80px 10%;
+            text-align: center;
+        }
 
-section{
-padding:120px 60px;
-text-align:center;
-}
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
 
-.section-title{
-font-size:45px;
-margin-bottom:60px;
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
 
-.cards{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:40px;
-}
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+        }
 
-.card{
-width:280px;
-padding:40px;
-border-radius:25px;
-background:rgba(255,255,255,0.07);
-backdrop-filter:blur(20px);
-transition:0.4s;
-}
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.08);
+        }
 
-.card:hover{
-transform:translateY(-15px);
-background:rgba(255,255,255,0.15);
-}
+        footer {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.6;
+        }
 
-footer{
-padding:50px;
-text-align:center;
-opacity:0.6;
-}
-</style>
+        @media(max-width:768px){
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-<div><strong>Arnol</strong></div>
-<div>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-</div>
-</nav>
+    <header>
+        <h2>ARNOL</h2>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
 
-<div class="hero">
-<h1>Creative Web Developer</h1>
-<p>Diseño experiencias digitales modernas, minimalistas y altamente funcionales.</p>
-<button class="btn">Explorar</button>
-</div>
+    <section class="hero">
+        <h1>Creative Web Developer</h1>
+        <p>Diseño experiencias digitales modernas, minimalistas y altamente profesionales.</p>
+        <img src="hero.jpg" alt="Portfolio Arnol" class="hero-img">
+    </section>
 
-<section id="about">
-<h2 class="section-title">Sobre mí</h2>
-<p>Soy un desarrollador enfocado en crear productos digitales premium con diseño moderno y animaciones fluidas.</p>
-</section>
+    <section class="section">
+        <h2>Mis Proyectos</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Startup Landing</h3>
+                <p>Diseño enfocado en conversión y alto impacto visual.</p>
+            </div>
+            <div class="card">
+                <h3>Interactive App</h3>
+                <p>Aplicaciones web con animaciones modernas.</p>
+            </div>
+            <div class="card">
+                <h3>Portfolio Pro</h3>
+                <p>Marca personal profesional con identidad premium.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="projects">
-<h2 class="section-title">Proyectos</h2>
-<div class="cards">
-<div class="card">
-<h3>Startup Landing</h3>
-<p>Diseño minimalista y conversión optimizada.</p>
-</div>
-<div class="card">
-<h3>Interactive App</h3>
-<p>Aplicación web con animaciones avanzadas.</p>
-</div>
-<div class="card">
-<h3>Portfolio Pro</h3>
-<p>Sitio profesional personal.</p>
-</div>
-</div>
-</section>
-
-<footer>
-© 2026 Arnol — Creative Developer
-</footer>
+    <footer>
+        © 2026 Arnol — Creative Developer
+    </footer>
 
 </body>
 </html>
