@@ -3,119 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arnol | Developer</title>
+<title>Arnol | Portfolio</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
 }
 
-body {
-    background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #16213e);
-    color: white;
-    overflow-x: hidden;
+body{
+background:#0f0f0f;
+color:white;
 }
 
-header {
-    padding: 100px 20px;
-    text-align: center;
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+z-index:1000;
 }
 
-header h1 {
-    font-size: 60px;
-    background: linear-gradient(90deg, #00f5a0, #00d9f5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+transition:0.3s;
 }
 
-header p {
-    margin-top: 20px;
-    font-size: 20px;
-    opacity: 0.8;
+nav a:hover{
+color:#00f5a0;
 }
 
-button {
-    margin-top: 30px;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(90deg, #00f5a0, #00d9f5);
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+/* HERO */
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#0f0f0f,#1a1a2e,#16213e);
 }
 
-button:hover {
-    transform: scale(1.1);
+header h1{
+font-size:60px;
+background:linear-gradient(90deg,#00f5a0,#00d9f5);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-section {
-    padding: 80px 20px;
-    text-align: center;
+header p{
+margin-top:20px;
+opacity:0.8;
 }
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
+button{
+margin-top:30px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#00f5a0,#00d9f5);
+color:black;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
 }
 
-.card {
-    background: rgba(255,255,255,0.05);
-    padding: 30px;
-    width: 250px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    transition: 0.4s;
+button:hover{
+transform:scale(1.1);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    background: rgba(255,255,255,0.1);
+/* SECTIONS */
+section{
+padding:100px 50px;
+text-align:center;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    opacity: 0.6;
+.section-title{
+font-size:40px;
+margin-bottom:40px;
+}
+
+/* SKILLS */
+.skill{
+margin:20px auto;
+max-width:400px;
+text-align:left;
+}
+
+.skill-bar{
+background:#222;
+border-radius:20px;
+overflow:hidden;
+}
+
+.skill-fill{
+height:10px;
+background:linear-gradient(90deg,#00f5a0,#00d9f5);
+width:0;
+animation:fillSkill 2s forwards;
+}
+
+@keyframes fillSkill{
+from{width:0;}
+}
+
+/* PROJECTS */
+.projects{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.card{
+background:#1a1a1a;
+padding:30px;
+width:250px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#222;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+opacity:0.5;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+<div><strong>Arnol</strong></div>
+<div>
+<a href="#about">Sobre mí</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Proyectos</a>
+</div>
+</nav>
+
 <header>
-    <h1>Arnol Developer</h1>
-    <p>Construyendo experiencias digitales modernas.</p>
-    <button onclick="alert('🚀 Bienvenido a mi mundo tech')">Explorar</button>
+<h1>Arnol Developer</h1>
+<p>Creando experiencias digitales modernas y funcionales.</p>
+<button onclick="alert('Gracias por visitar mi portafolio 🚀')">Contáctame</button>
 </header>
 
-<section>
-    <h2>Mis Proyectos</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Proyecto 1</h3>
-            <p>Landing page moderna.</p>
-        </div>
-        <div class="card">
-            <h3>Proyecto 2</h3>
-            <p>App interactiva.</p>
-        </div>
-        <div class="card">
-            <h3>Proyecto 3</h3>
-            <p>Sistema web dinámico.</p>
-        </div>
-    </div>
+<section id="about">
+<h2 class="section-title">Sobre mí</h2>
+<p>Soy un desarrollador en crecimiento apasionado por la tecnología y la creación de experiencias web modernas.</p>
+</section>
+
+<section id="skills">
+<h2 class="section-title">Habilidades</h2>
+
+<div class="skill">
+<p>HTML</p>
+<div class="skill-bar">
+<div class="skill-fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="skill-bar">
+<div class="skill-fill" style="width:80%"></div>
+</div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="skill-bar">
+<div class="skill-fill" style="width:65%"></div>
+</div>
+</div>
+
+</section>
+
+<section id="projects">
+<h2 class="section-title">Proyectos</h2>
+<div class="projects">
+<div class="card">
+<h3>Landing Page</h3>
+<p>Diseño moderno y responsive.</p>
+</div>
+<div class="card">
+<h3>App Interactiva</h3>
+<p>Proyecto con lógica y animaciones.</p>
+</div>
+<div class="card">
+<h3>Portfolio</h3>
+<p>Sitio personal profesional.</p>
+</div>
+</div>
 </section>
 
 <footer>
-    © 2026 Arnol | Developer
+© 2026 Arnol | Portfolio
 </footer>
 
 </body>
