@@ -1,63 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi App Pro</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnol | Developer</title>
 
-        header {
-            padding: 40px;
-            font-size: 40px;
-            font-weight: bold;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        .card {
-            background: white;
-            color: black;
-            width: 300px;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
-        }
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #16213e);
+    color: white;
+    overflow-x: hidden;
+}
 
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: #2a5298;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+header {
+    padding: 100px 20px;
+    text-align: center;
+}
 
-        button:hover {
-            background: #1e3c72;
-        }
-    </style>
+header h1 {
+    font-size: 60px;
+    background: linear-gradient(90deg, #00f5a0, #00d9f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    margin-top: 20px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #00f5a0, #00d9f5);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    width: 250px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.6;
+}
+</style>
 </head>
+
 <body>
 
-<header>🚀 Mi Primera App Profesional</header>
+<header>
+    <h1>Arnol Developer</h1>
+    <p>Construyendo experiencias digitales modernas.</p>
+    <button onclick="alert('🚀 Bienvenido a mi mundo tech')">Explorar</button>
+</header>
 
-<div class="card">
-    <h2>Bienvenido</h2>
-    <p>Esta es una app moderna hecha en HTML y CSS.</p>
-    <button onclick="mostrarMensaje()">Haz clic</button>
-</div>
+<section>
+    <h2>Mis Proyectos</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Proyecto 1</h3>
+            <p>Landing page moderna.</p>
+        </div>
+        <div class="card">
+            <h3>Proyecto 2</h3>
+            <p>App interactiva.</p>
+        </div>
+        <div class="card">
+            <h3>Proyecto 3</h3>
+            <p>Sistema web dinámico.</p>
+        </div>
+    </div>
+</section>
 
-<script>
-    function mostrarMensaje() {
-        alert("🔥 ¡Ya estás creando apps profesionales!");
-    }
-</script>
+<footer>
+    © 2026 Arnol | Developer
+</footer>
 
 </body>
 </html>
